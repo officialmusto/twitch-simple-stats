@@ -1,36 +1,20 @@
 // URL PARAMETERS
-const queryString = window.location.search
-const urlParams = new URLSearchParams(queryString)
-const twitchUsername = urlParams.get("username") || ''
+const twitchUsername = new URLSearchParams(window.location.search).get("username") || ""
 
 // FUNCTIONS
-async function UpdateMetrics() {
-    document.getElementById("subCountLabel").innerHTML = await GetMetric("https://decapi.me/twitch/subcount")
-    document.getElementById("followerCountLabel").innerHTML = await GetMetric("https://decapi.me/twitch/followcount")
-    document.getElementById("viewCountLabel").innerHTML = await GetViewCount()
+const updateMetrics = async () => {
+    const metrics = [
+        { id: "subCountLabel", url: "https://decapi.me/twitch/subcount" },
+        { id: "followerCountLabel", url: "https://decapi.me/twitch/followcount" },
+        { id: "viewCountLabel", url: "https://decapi.me/twitch/viewercount" }
+    ];
 
-    setTimeout(UpdateMetrics, 15000)
+    for (const { id, url } of metrics) {
+        const response = await fetch(`${url}/${twitchUsername}`)
+        const text = await response.text()
+        document.getElementById(id).innerHTML = isNaN(Number(text)) || text.includes("decapi.me") ? "-" : text
+    }
+    setTimeout(updateMetrics, 15000)
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    UpdateMetrics()
-})
-
-UpdateMetrics()
-
-async function GetMetric(url) {
-    const response = await fetch(`${url}/${twitchUsername}`)
-    const metric = await response.text()
-
-    if (metric.includes("decapi.me"))
-        return "-"
-    else
-        return metric
-}
-
-async function GetViewCount() {    
-    const response = await fetch(`https://decapi.me/twitch/viewercount/${twitchUsername}`)
-    const viewcount = await response.text()
-
-    return isNaN(Number(viewcount)) ? 0 : Number(viewcount)
-}
+// INIT
+document.addEventListener("DOMContentLoaded", updateMetrics)

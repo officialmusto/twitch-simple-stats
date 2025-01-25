@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://kit.fontawesome.com/5a7775e378.js" crossorigin="anonymous"></script>
-	<script src="./script.js"></script>
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metrics Dashboard</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://kit.fontawesome.com/5a7775e378.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
 </head>
 <body class="body">
-		<link rel="stylesheet" href="./index.css" />
-	<div id="mainContainer">
-		<i class="fa-solid fa-eye"></i>
-		<label class="metricLabel" id="viewCountLabel"></label>
-		<label>♥</label>
-		<label class="metricLabel" id="followerCountLabel"></label>
-		<label>★</label>
-		<label class="metricLabel" id="subCountLabel"></label>
-	</div>
+    <main id="mainContainer" class="metrics-container">
+        <div class="metric">
+            <i class="fa-solid fa-eye"></i>
+            <span id="viewCountLabel" class="metricLabel">-</span>
+        </div>
+        <div class="metric">
+            <span class="metric-icon">♥</span>
+            <span id="followerCountLabel" class="metricLabel">-</span>
+        </div>
+        <div class="metric">
+            <span class="metric-icon">★</span>
+            <span id="subCountLabel" class="metricLabel">-</span>
+        </div>
+    </main>
 </body>
 </html>

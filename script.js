@@ -6,8 +6,8 @@ const updateMetrics = async () => {
     const metrics = [
         { id: "subCountLabel", url: "https://decapi.me/twitch/subcount" },
         { id: "followerCountLabel", url: "https://decapi.me/twitch/followcount" },
-        { id: "viewCountLabel", url: "https://decapi.me/twitch/viewercount" }
-    ];
+        { id: "viewCountLabel", isLive: false, url: "https://decapi.me/twitch/viewercount" }
+    ]
 
     for (const { id, url } of metrics) {
         const response = await fetch(`${url}/${twitchUsername}`)
@@ -16,5 +16,6 @@ const updateMetrics = async () => {
     }
     setTimeout(updateMetrics, 15000)
 }
+
 // INIT
 document.addEventListener("DOMContentLoaded", updateMetrics)

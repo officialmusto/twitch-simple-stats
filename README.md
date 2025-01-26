@@ -4,7 +4,7 @@
 `https://officialmusto.github.io/twitch-simple-stats/`
 
 ## Description:
-**Simple Twitch Stats is a straightforward browser source overlay that will show you your twitch metrics. It shows your follower count, subscriber count, and current viewers in real time, updating every 15 seconds.**
+**Simple Twitch Stats is a straightforward browser source overlay that shows your current twitch metrics. It shows your follower count, subscriber count, and current viewers in real time, updating every 15 seconds.**
 - **To use these metrics fully, you must log-in:**
 
 **[USE THIS LINK TO AUTHORIZE YOUR SUB-COUNT](https://decapi.me/auth/twitch?redirect=subcount&scopes=channel:read:subscriptions+user:read:email)**

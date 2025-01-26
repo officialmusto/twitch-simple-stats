@@ -1,0 +1,3 @@
+[submodule "twitch-simple-stats"]
+	path = twitch-simple-stats
+	url = https://github.com/officialmusto/twitch-simple-stats.git

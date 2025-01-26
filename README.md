@@ -30,7 +30,7 @@
 
 ### 🔮 FUTURE ADD-ONS FOR THIS PROJECT:
 - **add more twitch metrics!!**
-- **color customization**
-- **adjust position of metrics**
-- **change icons for each metric**
+- **add user-able color customization**
+- **add user-able adjustment position of metrics**
+- **add user-able changeable icons for each metric**
 - **add more social medias to this project**

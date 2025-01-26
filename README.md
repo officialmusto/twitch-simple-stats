@@ -10,7 +10,7 @@
 **[USE THIS LINK TO AUTHORIZE YOUR SUB-COUNT](https://decapi.me/auth/twitch?redirect=subcount&scopes=channel:read:subscriptions+user:read:email)**
 
 ## 🏄‍♂️ SETUP:
-- **PLEASE 🚨 Go to browser and add `[YOUR-NAME]` after the `=`**.
+- **PLEASE 🚨 Go to browser and add `[TWITCH-USERNAME]` after the `=`**.
   - **example: `https://officialmusto.github.io/twitch-simple-stats/?username=mustolinii`**
 - **Once added, copy and paste link into your OBS Setup and add to overlay!**
 - **THATS IT! 🤩**

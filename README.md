@@ -17,3 +17,14 @@
 ## **To use Subscriber Count Metric, please Log In below:**
 
 **[USE THIS LINK TO AUTHORIZE YOUR SUB-COUNT](https://decapi.me/auth/twitch?redirect=subcount&scopes=channel:read:subscriptions+user:read:email)**
+
+---
+
+### ATTRIBUTES USED FOR THIS PROJECT:
+- **Streamer.bot**
+- **MDN SEARCH**
+- **chatGPT**
+- **font-awesome-icons**
+- **NUTTY!**
+- **decapi.me**
+- **github.pages**
